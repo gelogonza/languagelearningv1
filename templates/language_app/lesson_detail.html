@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <title>{{ lesson.title }}</title>
+</head>
+<body>
+    <h1>{{ lesson.title }}</h1>
+    <p>{{ lesson.content }}</p>
+    <audio controls>
+        <source src="{{ lesson.audio_url}}" type="audio/mpeg">
+        Your browser doesn't support audio playback.
+    </audio>
+    <img src="{{ lesson.image_url }}" alt="Lesson Image">
+    <a href="{% url 'quiz_detail' lesson.id%}">Take Quiz</a>
+</body>
+</html>
